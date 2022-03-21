@@ -1,17 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import firebase from "./utils/Firebase";
+import "firebase/compat/auth";
 
 function App() {
+  firebase.auth().onAuthStateChanged((currentUser) => {
+    console.log(currentUser ? "Estamos logeados" : "No estamos logeados");
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        <h2>React and electron</h2>
-        <h3>Mi nombre es juan felipe</h3>
-       
-       
-      </header>
+    <div>
+      <h1>App electron + react</h1>
     </div>
   );
 }
