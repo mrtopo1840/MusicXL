@@ -1,5 +1,6 @@
 import firebase from "firebase/compat/app";
 
+// Configuracion de Firebase que nos da la pagina
 const firebaseConfig = {
   apiKey: "AIzaSyBn2HC6IU6lui4hF7ikpxMU772Bjabwkrs",
   authDomain: "music-xl.firebaseapp.com",

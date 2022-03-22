@@ -5,8 +5,14 @@ const BrowserWindow = electron.BrowserWindow;
 const path = require("path");
 const isDev = require("electron-is-dev");
 
+// Declaracion de la pagina principal
 let mainWindow;
 
+/*
+  Funcion de creacion de la pagina principal
+  donde se declaran las propiedades de la app
+  y con webPreferences para evitar errores de seguridad.
+*/
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1000,
@@ -16,6 +22,7 @@ function createWindow() {
       contextIsolation: true,
     },
   });
+  //Se carga la pagina web en la aplicacion de escritorio.
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
@@ -31,6 +38,7 @@ function createWindow() {
 
 app.on("ready", createWindow);
 
+//Opcion que cuando se cerre la app, deje de ejecutar la app
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();

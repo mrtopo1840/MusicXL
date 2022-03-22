@@ -3,8 +3,9 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import "semantic-ui-css/semantic.min.css";
 import "./index.scss";
+// PENDIENTE DE USO (GENERA PROBLEMA DE COMPILACION)
+//import "semantic-ui-css/semantic.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
