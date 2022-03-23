@@ -10,6 +10,8 @@ import LogoNameWith from "../../assets/png/logo-name-white.png";
 import "./Auth.scss";
 
 export default function Auth() {
+  //Estado que nos permite manejar que formulario queremos recbir
+  //segun los casos del swich
   const [selectedForm, setSelectedForm] = useState(null);
 
   //Funcion de manejo de los forms que se van a usar a travez de un
@@ -19,9 +21,9 @@ export default function Auth() {
       case "login":
         return <LoginForm />;
       case "register":
-        return <RegisterForm />;
+        return <RegisterForm setSelectedForm={setSelectedForm} />;
       default:
-        return <AuthOptions />;
+        return <AuthOptions setSelectedForm={setSelectedForm} />;
     }
   };
 

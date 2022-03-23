@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./index.scss";
 // PENDIENTE DE USO (GENERA PROBLEMA DE COMPILACION)
-//import "semantic-ui-css/semantic.min.css";
+import "semantic-ui-css/semantic.min.css";
 
 ReactDOM.render(
   <React.StrictMode>
